@@ -1,0 +1,5 @@
+target/
+bin/
+src/Driver
+src/ExtentReports/
+!.mvn/wrapper/maven-wrapper.jar
