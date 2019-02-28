@@ -18,13 +18,13 @@ public class HelperClass {
 	protected static String GetAllUserUrl = BaseURL+"/users/all";
 	protected static String GetAllUserUrlJson = BaseURL+"/user/all/json";
 	protected static String DeleteAllUserUrl = BaseURL+"/user/all";
-	
-	protected static DateFormat dateFormat = new SimpleDateFormat("dd_MMM_yy_HHmmssSSS");
-	protected static String randomdatenumber = dateFormat.format(new Date());
-	protected static String extentReportImagePath = System.getProperty("user.dir") + "\\src\\ExtentReports\\"
-			+ randomdatenumber + "\\";
-	protected static String extentReportFilename = extentReportImagePath + "extentReportFile" + ".html";
-	protected static ExtentReports extent = new ExtentReports(extentReportFilename, false);
+	protected static String RANDOMNUMBER = new SimpleDateFormat("dd_MMM_yy_HHmmssSSS").format(new Date());
+	protected static String FIlESEPARATOR = File.separator;
+	protected static String EXTENT_REPORT_IMAGE_PATH = System.getProperty("user.dir") + FIlESEPARATOR + "src" + FIlESEPARATOR
+			+ "ExtentReports" + FIlESEPARATOR + RANDOMNUMBER + "";
+	protected static Path path = FileSystems.getDefault().getPath("").toAbsolutePath();
+	protected static String EXTENT_REPORT_FILENAME = EXTENT_REPORT_IMAGE_PATH + "extentReportFile" + ".html";
+	protected static ExtentReports extent = new ExtentReports(EXTENT_REPORT_FILENAME, false);
 	protected static ExtentTest extentTest;
 
 	@AfterClass
