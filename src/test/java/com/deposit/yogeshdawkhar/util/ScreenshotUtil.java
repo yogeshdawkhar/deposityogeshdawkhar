@@ -13,7 +13,7 @@ import com.deposit.yogeshdawkhar.helper.HelperClass;
 public class ScreenshotUtil extends HelperClass {
 
 	public static boolean takeScreenshot(final String name) {
-		String screenshotDirectory = extentReportImagePath;
+		String screenshotDirectory = EXTENT_REPORT_IMAGE_PATH;
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		return screenshot.renameTo(new File(screenshotDirectory, String.format("%s.png", name)));
 	}
