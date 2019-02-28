@@ -7,7 +7,7 @@ public class ExtentReportLog extends HelperClass{
 	
 	public static void testCaseFailWithImage(String logmessage) throws Exception {
 		extentTest.log(LogStatus.FAIL, logmessage
-				+ extentTest.addScreenCapture(extentReportImagePath + ScreenshotUtil.createimagename() + ".png"));
+				+ extentTest.addScreenCapture(EXTENT_REPORT_IMAGE_PATH + ScreenshotUtil.createimagename() + ".png"));
 	}
 
 	public static void testCaseFail(String logmessage) {
@@ -16,7 +16,7 @@ public class ExtentReportLog extends HelperClass{
 
 	public static void testCaseInfoWithImage(String logmessage) throws Exception {
 		extentTest.log(LogStatus.INFO, logmessage
-				+ extentTest.addScreenCapture(extentReportImagePath + ScreenshotUtil.createimagename() + ".png"));
+				+ extentTest.addScreenCapture(EXTENT_REPORT_IMAGE_PATH + ScreenshotUtil.createimagename() + ".png"));
 	}
 
 	public static void testCaseInfo(String logmessage) {
@@ -25,7 +25,7 @@ public class ExtentReportLog extends HelperClass{
 
 	public static void testCasePassWithImage(String logmessage) throws Exception {
 		extentTest.log(LogStatus.PASS, logmessage
-				+ extentTest.addScreenCapture(extentReportImagePath + ScreenshotUtil.createimagename() + ".png"));
+				+ extentTest.addScreenCapture(EXTENT_REPORT_IMAGE_PATH + ScreenshotUtil.createimagename() + ".png"));
 	}
 
 	public static void testCasePass(String logmessage) {
@@ -34,7 +34,7 @@ public class ExtentReportLog extends HelperClass{
 
 	public static void testCaseSkipWithImage(String logmessage) throws Exception {
 		extentTest.log(LogStatus.SKIP, logmessage
-				+ extentTest.addScreenCapture(extentReportImagePath + ScreenshotUtil.createimagename() + ".png"));
+				+ extentTest.addScreenCapture(EXTENT_REPORT_IMAGE_PATH + ScreenshotUtil.createimagename() + ".png"));
 	}
 
 	public static void testCaseSkip(String logmessage) {
