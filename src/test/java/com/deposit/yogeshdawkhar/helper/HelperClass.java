@@ -1,6 +1,8 @@
 package com.deposit.yogeshdawkhar.helper;
 
-import java.text.DateFormat;
+import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -18,13 +20,13 @@ public class HelperClass {
 	protected static String GetAllUserUrl = BaseURL+"/users/all";
 	protected static String GetAllUserUrlJson = BaseURL+"/user/all/json";
 	protected static String DeleteAllUserUrl = BaseURL+"/user/all";
-	protected static String RANDOMNUMBER = new SimpleDateFormat("dd_MMM_yy_HHmmssSSS").format(new Date());
-	protected static String FIlESEPARATOR = File.separator;
-	protected static String EXTENT_REPORT_IMAGE_PATH = System.getProperty("user.dir") + FIlESEPARATOR + "src" + FIlESEPARATOR
-			+ "ExtentReports" + FIlESEPARATOR + RANDOMNUMBER + "";
+	protected static String randomNumber = new SimpleDateFormat("dd_MMM_yy_HHmmssSSS").format(new Date());
+	protected static String fileSeprator = File.separator;
+	protected static String extentReportImagePath = System.getProperty("user.dir") + fileSeprator + "src" + fileSeprator
+			+ "ExtentReports" + fileSeprator + randomNumber + "";
 	protected static Path path = FileSystems.getDefault().getPath("").toAbsolutePath();
-	protected static String EXTENT_REPORT_FILENAME = EXTENT_REPORT_IMAGE_PATH + "extentReportFile" + ".html";
-	protected static ExtentReports extent = new ExtentReports(EXTENT_REPORT_FILENAME, false);
+	protected static String extentReportFilename = extentReportImagePath + "extentReportFile" + ".html";
+	protected static ExtentReports extent = new ExtentReports(extentReportFilename, false);
 	protected static ExtentTest extentTest;
 
 	@AfterClass
